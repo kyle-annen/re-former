@@ -1,0 +1,9 @@
+
+
+<%= form_for @user do |f| %>
+  Username: <%= f.text_field :username placeholder="Username"%><br>
+  Email: <%= f.text_field :email %><br>
+  Password: <%= f.password_field :password %><br>
+  <%= f.submit "Create" %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<% end %>
